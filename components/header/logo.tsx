@@ -6,7 +6,7 @@ import { ThemedView } from "../themed-view";
 const Header = () => {
   return (
     <ThemedView style={[styles.heroSection, { userSelect: "none" }]}>
-      <Pressable onPress={() => router.push("/(tabs)")}>
+      <Pressable onPress={() => router.push("/employer/(tabs)")}>
         <ThemedText type="title" style={[styles.logo]}>
           Workdee
         </ThemedText>
