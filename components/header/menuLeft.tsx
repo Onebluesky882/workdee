@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { Icon } from "../Icons";
 import { ThemedView } from "../themed-view";
 
@@ -10,12 +10,14 @@ const MenuLeft = () => {
   return (
     <ThemedView style={styles.container}>
       {session && <> Welcome, {session?.user.name}</>}
-      <Icon
-        library="FontAwesome"
-        name="user-circle-o"
-        size={24}
-        color="black"
-      />
+      <TouchableOpacity>
+        <Icon
+          library="FontAwesome"
+          name="user-circle-o"
+          size={24}
+          color="black"
+        />
+      </TouchableOpacity>
       <Icon
         library="Ionicons"
         name="notifications-circle"

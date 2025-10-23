@@ -1,12 +1,16 @@
-import { StyleSheet } from "react-native";
+import { router } from "expo-router";
+import React from "react";
+import { Pressable, StyleSheet } from "react-native";
 import { ThemedText } from "../themed-text";
 import { ThemedView } from "../themed-view";
 const Header = () => {
   return (
-    <ThemedView style={styles.heroSection}>
-      <ThemedText type="title" style={styles.logo}>
-        Workdee
-      </ThemedText>
+    <ThemedView style={[styles.heroSection, { userSelect: "none" }]}>
+      <Pressable onPress={() => router.push("/(tabs)")}>
+        <ThemedText type="title" style={[styles.logo]}>
+          Workdee
+        </ThemedText>
+      </Pressable>
     </ThemedView>
   );
 };
@@ -28,6 +32,7 @@ const styles = StyleSheet.create({
   },
 
   heroSection: {
+    backgroundColor: "inherit",
     padding: 2,
     alignItems: "center",
   },

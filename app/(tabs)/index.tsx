@@ -49,9 +49,7 @@ export default function HomeScreen() {
             onPress={() => router.push("/(tabs)/JobsBoard")}
           />
         </View>
-        <ThemedText type="title" style={styles.heroTitle}>
-          บอร์ดงาน
-        </ThemedText>
+
         <ThemedText style={styles.heroSubtitle}>
           งานฟรีแลนซ์ที่น่าเชื่อถือ พร้อมระบบรีวิวและการันตี
         </ThemedText>
